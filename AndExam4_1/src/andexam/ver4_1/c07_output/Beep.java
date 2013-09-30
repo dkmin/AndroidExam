@@ -34,6 +34,9 @@ public class Beep extends Activity {
 			case R.id.play2:
 				mAm.playSoundEffect(AudioManager.FX_KEYPRESS_STANDARD);
 				break;
+			case R.id.play3:
+			    v.playSoundEffect(SoundEffectConstants.CLICK);
+			    break;
 			}
 		}
 	};
