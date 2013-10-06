@@ -23,5 +23,6 @@
     <string name="title_activity_memory_test">MemoryTestActivity</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_application_kill">ApplicationKillActivity</string>
+    <string name="title_activity_count_down">CountDownActivity</string>
 
 </resources>
