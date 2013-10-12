@@ -37,6 +37,7 @@ import andexam.ver4_1.c35_setting.*;
 import andexam.ver4_1.c36_tel.*;
 import andexam.ver4_1.c37_appwidget.*;
 import andexam.ver4_1.c38.CountDownActivity;
+import andexam.ver4_1.c38.FreeLineActivity;
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
@@ -594,6 +595,7 @@ public class AndExam extends Activity {
 			break;
 		case 38: // 추가
 			arExample.add(new Example(CountDownActivity.class, "카운트다운 게임"));
+			arExample.add(new Example(FreeLineActivity.class, "카운트다운 게임"));
 			break;
 		}
 	}

@@ -14,8 +14,7 @@ public class OrderDialog extends Activity {
 	}
 	
 	public void mOnClick(View v) {
-		final LinearLayout linear = (LinearLayout)
-			View.inflate(this, R.layout.order, null);
+		final LinearLayout linear = (LinearLayout)View.inflate(this, R.layout.order, null);
 	
 		new AlertDialog.Builder(this)
 		.setTitle("주문 정보를 입력하시오.")

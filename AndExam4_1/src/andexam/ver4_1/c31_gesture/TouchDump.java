@@ -31,7 +31,7 @@ public class TouchDump extends Activity {
 		//	>> MotionEvent.ACTION_POINTER_ID_SHIFT;
 		// for 2.2 later
 		int pid = (action & MotionEvent.ACTION_POINTER_INDEX_MASK) 
-			>> MotionEvent.ACTION_POINTER_INDEX_SHIFT;
+			>> MotionEvent.ACTION_POINTER_INDEX_SHIFT; //pointer index
 
 		String info = "p" + pid + " " + arAction[pureaction];
 		for (int i=0; i < event.getPointerCount();i++) {

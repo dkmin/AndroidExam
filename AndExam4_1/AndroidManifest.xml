@@ -1688,6 +1688,10 @@
             android:name="andexam.ver4_1.c38.CountDownActivity"
             android:label="@string/title_activity_count_down" >
         </activity>
+        <activity
+            android:name="andexam.ver4_1.c38.FreeLineActivity"
+            android:label="FreeLine" >
+        </activity>
     </application>
 
     <uses-feature android:name="android.software.live_wallpaper" />
