@@ -2,6 +2,8 @@ package andexam.ver4_1.c38;
 
 import java.util.*;
 
+import yuku.ambilwarna.AmbilWarnaDialog;
+import yuku.ambilwarna.AmbilWarnaDialog.OnAmbilWarnaListener;
 import andexam.ver4_1.R;
 import android.app.*;
 import android.content.*;
@@ -22,8 +24,10 @@ public class FreeLineActivity extends Activity {
 	private MyView vw;
 	// 정점 하나에 대한 정보를 가지는 클래스
 	private TextView tvNowPenSize;
+	private TextView tvNowPenColor;
 	
-	private int penSize = 3;
+	private int penSize = 5;
+	private int penColor = Color.BLACK;
 	
 	public class Vertex {
 		Vertex(float ax, float ay, boolean ad) {
@@ -43,6 +47,9 @@ public class FreeLineActivity extends Activity {
 		setContentView(R.layout.freeline);
 		
 		tvNowPenSize = (TextView) findViewById(R.id.tvNowPenSize);
+		tvNowPenSize.setText(String.valueOf(penSize));
+		tvNowPenColor = (TextView) findViewById(R.id.tvNowPenColor);
+		tvNowPenSize.setBackgroundColor(penColor);
 		
 		LinearLayout linear = (LinearLayout) findViewById(R.id.linearFreeline);
 		vw = new MyView(this);
@@ -58,6 +65,16 @@ public class FreeLineActivity extends Activity {
 				
 			}
 		});
+		
+		Button btnPenColor = (Button) findViewById(R.id.btnPenColor);
+		btnPenColor.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				selectColor();
+				
+			}
+		});
 
 		arVertex = new ArrayList<Vertex>();
 	}
@@ -66,6 +83,9 @@ public class FreeLineActivity extends Activity {
 		LinearLayout linear = (LinearLayout) View.inflate(this, R.layout.penselect, null);
 		SeekBar seekbarPenSize = (SeekBar) linear.findViewById(R.id.seekbarPenSize);
 		final TextView tvPenSize = (TextView) linear.findViewById(R.id.tvPenSize); 
+		
+		seekbarPenSize.setProgress(penSize);
+		tvPenSize.setText(String.valueOf(penSize));
 		
 		seekbarPenSize.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			
@@ -80,9 +100,8 @@ public class FreeLineActivity extends Activity {
 			}
 			
 			@Override
-			public void onProgressChanged(SeekBar seekBar, int progress,
-					boolean fromUser) {
-				tvPenSize.setText("Now Pen Size : " + progress);
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+				tvPenSize.setText( String.valueOf(progress) );
 			}
 		});
 		
@@ -91,10 +110,9 @@ public class FreeLineActivity extends Activity {
 		.setView(linear)
 		.setPositiveButton("확인", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int whichButton) {
-				String temp = (String) tvPenSize.getText();
-				penSize = Integer.parseInt( temp.replace("Now Pen Size : ", "") );
+				penSize = Integer.parseInt( (String) tvPenSize.getText() );
 				vw.setStrokeWidth(penSize);
-				tvNowPenSize.setText("" + penSize);
+				tvNowPenSize.setText( String.valueOf(penSize) );
 			}
 		})
 		.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -103,6 +121,26 @@ public class FreeLineActivity extends Activity {
 			}
 		})
 		.show();
+	}
+	
+	private void selectColor() {
+		//https://github.com/brk3/android-color-picker.git
+		
+		AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, penColor, new OnAmbilWarnaListener() {
+			
+			@Override
+			public void onOk(AmbilWarnaDialog arg0, int color) {
+				penColor = color;
+				tvNowPenColor.setBackgroundColor(color);
+				vw.setColor(color);
+			}
+			
+			@Override
+			public void onCancel(AmbilWarnaDialog arg0) {
+				
+			}
+		});
+		dialog.show();
 	}
 
 	protected class MyView extends View {
@@ -113,13 +151,18 @@ public class FreeLineActivity extends Activity {
 
 			// Paint 객체 미리 초기화
 			mPaint = new Paint();
-			mPaint.setColor(Color.BLACK);
+			mPaint.setColor(penColor);
 			mPaint.setStrokeWidth(penSize);
 			mPaint.setAntiAlias(true);
+			mPaint.setStrokeCap(Paint.Cap.ROUND);
 		}
 		
 		public void setStrokeWidth(int size) {
 			mPaint.setStrokeWidth(size);
+		}
+		
+		public void setColor(int color) {
+			mPaint.setColor(color);
 		}
 
 		public void onDraw(Canvas canvas) {
