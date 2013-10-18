@@ -1,25 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cccccc"
     android:orientation="vertical" >
 
-    <TextView
+    <SeekBar
+        android:id="@+id/seekbarPenSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="blue"
-        android:textColor="#0000ff" />
+        android:max="100"
+        android:padding="10dip"
+        android:progress="1" />
 
     <TextView
-        style="@style/red30_2"
+        android:id="@+id/tvPenSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="red 30 sp" />
-
-    <TextView
-        style="@style/yellow30italic_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="yellow 30 sp" />
+        android:text="Now Pen Size : 1" />
 
 </LinearLayout>

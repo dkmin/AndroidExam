@@ -4,6 +4,7 @@ import andexam.ver4_1.*;
 import android.app.*;
 import android.os.*;
 import android.text.*;
+import android.util.Log;
 import android.widget.*;
 
 public class TextChange extends Activity {
@@ -21,12 +22,14 @@ public class TextChange extends Activity {
 
 	TextWatcher mWatcher = new TextWatcher() {
 		public void afterTextChanged(Editable s) {
+			
 		}
 
 		public void beforeTextChanged(CharSequence s, int start, int count,	int after) {
 		}
 
 		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			Log.d("ldk", "start: " + start + ", before:" + before + ", count:" + count);
 			mText.setText("echo:" + s);
 		}
 	};

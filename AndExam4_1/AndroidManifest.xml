@@ -29,7 +29,7 @@
         <activity
             android:name="andexam.ver4_1.AndExamSetting"
             android:label="옵션" />
-        // 4장.뷰
+        // 4장.뷰
         <activity
             android:name="andexam.ver4_1.c04_view.TextViewTest"
             android:label="TextViewTest" />
@@ -39,7 +39,7 @@
         <activity
             android:name="andexam.ver4_1.c04_view.ButtonEdit"
             android:label="ButtonEdit" />
-        // 5장.레이아웃
+        // 5장.레이아웃
         <activity
             android:name="andexam.ver4_1.c05_layout.Horizontal1"
             android:label="Horizontal1" />
@@ -133,7 +133,7 @@
         <activity
             android:name="andexam.ver4_1.c05_layout.Table2"
             android:label="Table2" />
-        // 6장.레이아웃 관리
+        // 6장.레이아웃 관리
         <activity
             android:name="andexam.ver4_1.c06_layoutman.NestLayout"
             android:label="NestLayout" />
@@ -206,7 +206,7 @@
         <activity
             android:name="andexam.ver4_1.c06_layoutman.InputForm"
             android:label="InputForm" />
-        // 7장 출력
+        // 7장 출력
         <activity
             android:name="andexam.ver4_1.c07_output.CustomView"
             android:label="CustomView" />
@@ -279,7 +279,7 @@
         <activity
             android:name="andexam.ver4_1.c07_output.Vibrate"
             android:label="Vibrate" />
-        // 8.입력
+        // 8.입력
         <activity
             android:name="andexam.ver4_1.c08_input.HandleEvent"
             android:label="HandleEvent" />
@@ -316,7 +316,7 @@
         <activity
             android:name="andexam.ver4_1.c08_input.TimerTest"
             android:label="TimerTest" />
-        // 9.메뉴
+        // 9.메뉴
         <activity
             android:name="andexam.ver4_1.c09_menu.OptionMenu"
             android:label="OptionMenu" />
@@ -341,7 +341,7 @@
         <activity
             android:name="andexam.ver4_1.c09_menu.ChangeMenu"
             android:label="ChangeMenu" />
-        // 10.개발툴
+        // 10.개발툴
         <activity
             android:name="andexam.ver4_1.c10_tool.MemoryPower"
             android:label="MemoryPower" />
@@ -362,7 +362,7 @@
         <activity
             android:name="andexam.ver4_1.c10_tool.LogTest"
             android:label="LogTest" />
-        // 11.기본 위젯
+        // 11.기본 위젯
         <activity
             android:name="andexam.ver4_1.c11_widget.ReadResource"
             android:label="ReadResource" />
@@ -453,7 +453,7 @@
         <activity
             android:name="andexam.ver4_1.c11_widget.ButtonSelector"
             android:label="ButtonSelector" />
-        // 12.어댑터 뷰
+        // 12.어댑터 뷰
         <activity
             android:name="andexam.ver4_1.c12_adapterview.ListViewTest"
             android:label="ListViewTest" />
@@ -505,7 +505,7 @@
         <activity
             android:name="andexam.ver4_1.c12_adapterview.GalleryTest"
             android:label="GalleryTest" />
-        // 13. 고급 위젯
+        // 13. 고급 위젯
         <activity
             android:name="andexam.ver4_1.c13_advwidget.ProgressBarTest"
             android:label="ProgressBarTest" />
@@ -585,7 +585,7 @@
         <activity
             android:name="andexam.ver4_1.c13_advwidget.ListPopupWindowTest"
             android:label="ListPopupWindowTest" />
-        // 14. 커스텀 위젯
+        // 14. 커스텀 위젯
         <activity
             android:name="andexam.ver4_1.c14_cuswidget.SoundEdit"
             android:label="SoundEdit" />
@@ -619,7 +619,7 @@
         <activity
             android:name="andexam.ver4_1.c14_cuswidget.Rainbow"
             android:label="Rainbow" />
-        // 15. 리소스 관리
+        // 15. 리소스 관리
         <activity
             android:name="andexam.ver4_1.c15_resource.LandPort"
             android:label="LandPort" />
@@ -662,7 +662,7 @@
         <activity
             android:name="andexam.ver4_1.c15_resource.SwLayout"
             android:label="SwLayout" />
-        // 16. 대화상자
+        // 16. 대화상자
         <activity
             android:name="andexam.ver4_1.c16_dialog.DialogTest"
             android:label="DialogTest" />
@@ -714,7 +714,7 @@
         <activity
             android:name="andexam.ver4_1.c16_dialog.Popup"
             android:label="Popup" />
-        // 17.액티비티
+        // 17.액티비티
         <activity
             android:name="andexam.ver4_1.c17_activity.CallActivity"
             android:label="CallActivity" />
@@ -779,7 +779,7 @@
         <activity
             android:name="andexam.ver4_1.c17_activity.CustomTab"
             android:label="CustomTab" />
-        // 18.프로세스
+        // 18.프로세스
         <activity
             android:name="andexam.ver4_1.c18_process.ApplicationTest"
             android:label="ApplicationTest" />
@@ -788,14 +788,14 @@
             android:label="NoTitle" />
         <!--
              <activity android:name=".c18_process.NoTitle" android:label="NoTitle" 
-            android:theme="@android:style/Theme.NoTitleBar" />
+            android:theme="@android:style/Theme.NoTitleBar" />
         -->
         <activity
             android:name="andexam.ver4_1.c18_process.FullScreen"
             android:label="FullScreen" />
         <!--
              <activity android:name=".c18_process.FullScreen" android:label="FullScreen" 
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         -->
         <activity
             android:name="andexam.ver4_1.c18_process.Overlay"
@@ -810,7 +810,7 @@
         <activity
             android:name="andexam.ver4_1.c18_process.DragReorder"
             android:label="DragReorder" />
-        // 19.스레드
+        // 19.스레드
         <activity
             android:name="andexam.ver4_1.c19_thread.ThreadTest"
             android:label="ThreadTest" />
@@ -859,7 +859,7 @@
         <activity
             android:name="andexam.ver4_1.c19_thread.BackWork3"
             android:label="BackWork3" />
-        // 20.프래그먼트
+        // 20.프래그먼트
         <activity
             android:name="andexam.ver4_1.c20_fragment.FragmentTest"
             android:label="FragmentTest" />
@@ -911,7 +911,7 @@
         <activity
             android:name="andexam.ver4_1.c20_fragment.MultiPaneOrient$DescActivity"
             android:label="DescActivity" />
-        // 21.액션바
+        // 21.액션바
         <activity
             android:name="andexam.ver4_1.c21_actionbar.ActionBarTest"
             android:label="ActionBarTest" />
@@ -955,7 +955,7 @@
         <activity
             android:name="andexam.ver4_1.c21_actionbar.ActionModeTest"
             android:label="ActionModeTest" />
-        // 22.그리기        
+        // 22.그리기        
         <activity
             android:name="andexam.ver4_1.c22_graphic.BlurFlt"
             android:label="BlurFlt" />
@@ -1053,7 +1053,7 @@
         <activity
             android:name="andexam.ver4_1.c22_graphic.OpenGLTest"
             android:label="OpenGLTest" />
-        // 23.애니메이션
+        // 23.애니메이션
         <activity
             android:name="andexam.ver4_1.c23_animation.FrameAni"
             android:label="FrameAni" />
@@ -1096,7 +1096,7 @@
         <activity
             android:name="andexam.ver4_1.c23_animation.TextSwitcherTest"
             android:label="TextSwitcherTest" />
-        // 24.속성 애니메이션
+        // 24.속성 애니메이션
         <activity
             android:name="andexam.ver4_1.c24_propani.ValueAnimatorTest"
             android:label="ValueAnimatorTest" />
@@ -1127,7 +1127,7 @@
         <activity
             android:name="andexam.ver4_1.c24_propani.LayoutAnim"
             android:label="LayoutAnim" />
-        // 25. 파일
+        // 25. 파일
         <activity
             android:name="andexam.ver4_1.c25_file.FileIO"
             android:label="FileIO" />
@@ -1155,7 +1155,7 @@
         <activity
             android:name="andexam.ver4_1.c25_file.TextPrefTest"
             android:label="TextPrefTest" />
-        // 26장.CP
+        // 26장.CP
         <activity
             android:name="andexam.ver4_1.c26_cp.EnglishWord"
             android:label="EnglishWord" />
@@ -1171,7 +1171,7 @@
         <activity
             android:name="andexam.ver4_1.c26_cp.CallWordCP"
             android:label="CallWordCP" />
-        // 27장.클립보드
+        // 27장.클립보드
         <activity
             android:name="andexam.ver4_1.c27_clipboard.CopyText"
             android:label="CopyText" />
@@ -1190,7 +1190,7 @@
         <activity
             android:name="andexam.ver4_1.c27_clipboard.DragCoin"
             android:label="DragCoin" />
-        // 28장. 네트워크
+        // 28장. 네트워크
         <activity
             android:name="andexam.ver4_1.c28_network.ConMgr"
             android:label="ConMgr" />
@@ -1236,7 +1236,7 @@
         <activity
             android:name="andexam.ver4_1.c28_network.JSONObjectTest"
             android:label="JSONObjectTest" />
-        // 29장. BR
+        // 29장. BR
         <activity
             android:name="andexam.ver4_1.c29_br.NapAlarm"
             android:label="NapAlarm" />
@@ -1274,7 +1274,7 @@
 		 	<action android:name="android.intent.action.MEDIA_MOUNTED" />
 		 	<data android:scheme="file" />
 		 </intent-filter>
-		</receiver>
+		</receiver>
         -->
         <activity
             android:name="andexam.ver4_1.c29_br.AlarmTest"
@@ -1282,7 +1282,7 @@
 
         <receiver android:name="andexam.ver4_1.c29_br.AlarmReceiver" />
         <receiver android:name="andexam.ver4_1.c29_br.DisplayScore" />
-        // 30장. 서비스
+        // 30장. 서비스
         <service
             android:name="andexam.ver4_1.c30_service.NewsService"
             android:enabled="true" >
@@ -1363,7 +1363,7 @@
                 android:name="android.view.im"
                 android:resource="@xml/minikeyboard_method" />
         </service>
-		// 31장.제스처
+		// 31장.제스처
         <activity
             android:name="andexam.ver4_1.c31_gesture.GestureDump"
             android:label="GestureDump" />
@@ -1385,7 +1385,7 @@
         <activity
             android:name="andexam.ver4_1.c31_gesture.ImageZoom"
             android:label="ImageZoom" />
-        // 32장.맵 서비스
+        // 32장.맵 서비스
         <activity
             android:name="andexam.ver4_1.c32_map.GetProvider"
             android:label="GetProvider" />
@@ -1426,7 +1426,7 @@
         <activity
             android:name="andexam.ver4_1.c32_map.OverlayLocation"
             android:label="OverlayLocation" />
-        // 33장.멀티미디어
+        // 33장.멀티미디어
         <activity
             android:name="andexam.ver4_1.c33_multimedia.MPTest"
             android:label="MPTest" />
@@ -1482,7 +1482,7 @@
             android:name="andexam.ver4_1.c33_multimedia.AttachImage"
             android:label="AttachImage"
             android:screenOrientation="landscape" />
-        // 34장.센서
+        // 34장.센서
         <activity
             android:name="andexam.ver4_1.c34_sensor.SensorManagerTest"
             android:label="SensorManagerTest" />
@@ -1517,7 +1517,7 @@
             android:name="andexam.ver4_1.c34_sensor.Ottogi"
             android:label="Ottogi"
             android:screenOrientation="portrait" />
-        // 35장.시스템 설정
+        // 35장.시스템 설정
         <activity
             android:name="andexam.ver4_1.c35_setting.WakeAlways"
             android:label="WakeAlways" />
@@ -1536,7 +1536,7 @@
         <activity
             android:name="andexam.ver4_1.c35_setting.MakeWallPaper"
             android:label="MakeWallPaper" />
-        // 36장.전화
+        // 36장.전화
         <activity
             android:name="andexam.ver4_1.c36_tel.TelState"
             android:label="TelState" />
@@ -1573,7 +1573,7 @@
         <activity
             android:name="andexam.ver4_1.c36_tel.SmsLog"
             android:label="SmsLog" />
-        // 앱 위젯
+        // 앱 위젯
         <activity
             android:name="andexam.ver4_1.c37_appwidget.AppWidgetManagerTest"
             android:label="AppWidgetManagerTest" />
@@ -1681,6 +1681,16 @@
         <activity
             android:name="andexam.ver4_1.c18_process.ApplicationKillActivity"
             android:label="@string/title_activity_application_kill" >
+        </activity>
+        
+        //38장
+        <activity
+            android:name="andexam.ver4_1.c38.CountDownActivity"
+            android:label="@string/title_activity_count_down" >
+        </activity>
+        <activity
+            android:name="andexam.ver4_1.c38.FreeLineActivity"
+            android:label="FreeLine" >
         </activity>
     </application>
 

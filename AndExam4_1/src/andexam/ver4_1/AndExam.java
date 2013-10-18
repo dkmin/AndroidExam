@@ -36,6 +36,8 @@ import andexam.ver4_1.c34_sensor.*;
 import andexam.ver4_1.c35_setting.*;
 import andexam.ver4_1.c36_tel.*;
 import andexam.ver4_1.c37_appwidget.*;
+import andexam.ver4_1.c38.CountDownActivity;
+import andexam.ver4_1.c38.FreeLineActivity;
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
@@ -591,6 +593,10 @@ public class AndExam extends Activity {
 		case 37: // 앱위젯
 			arExample.add(new Example(AppWidgetManagerTest.class, "앱 위젯 관리자로 위젯 목록 덤프"));
 			break;
+		case 38: // 추가
+			arExample.add(new Example(CountDownActivity.class, "카운트다운 게임"));
+			arExample.add(new Example(FreeLineActivity.class, "카운트다운 게임"));
+			break;
 		}
 	}
 	
@@ -630,6 +636,7 @@ public class AndExam extends Activity {
 			"35장 시스템 설정",
 			"36장 전화",
 			"37장 앱위젯",
+			"38장 추가",
 		};
 	
 	ArrayAdapter<CharSequence> mAdapter;
