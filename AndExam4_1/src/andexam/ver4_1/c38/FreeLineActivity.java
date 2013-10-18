@@ -30,14 +30,22 @@ public class FreeLineActivity extends Activity {
 	private int penColor = Color.BLACK;
 	
 	public class Vertex {
-		Vertex(float ax, float ay, boolean ad) {
-			x = ax;
-			y = ay;
-			Draw = ad;
-		}
 		float x;
 		float y;
 		boolean Draw;
+		int eventType;
+		int penSize;
+		int penColor;
+		
+		Vertex(float ax, float ay, boolean ad, int eventType, int penSize, int penColor) {
+			x = ax;
+			y = ay;
+			Draw = ad;
+			this.eventType = eventType;
+			this.penSize = penSize;
+			this.penColor = penColor;
+		}
+
 	}
 
 	ArrayList<Vertex> arVertex;
@@ -170,6 +178,10 @@ public class FreeLineActivity extends Activity {
 
 			// 정점을 순회하면서 선분으로 잇는다.
 			for (int i=0;i<arVertex.size();i++) {
+				if(arVertex.get(i).eventType == MotionEvent.ACTION_DOWN) {
+					mPaint.setColor(arVertex.get(i).penColor);
+					mPaint.setStrokeWidth(arVertex.get(i).penSize);
+				}
 				if (arVertex.get(i).Draw) {
 					canvas.drawLine(arVertex.get(i-1).x, arVertex.get(i-1).y, 
 							arVertex.get(i).x, arVertex.get(i).y, mPaint);
@@ -180,11 +192,11 @@ public class FreeLineActivity extends Activity {
 		// 터치 이동 시마다 정점을 추가한다.
 		public boolean onTouchEvent(MotionEvent event) {
 			if (event.getAction() == MotionEvent.ACTION_DOWN) {
-				arVertex.add(new Vertex(event.getX(), event.getY(), false));
+				arVertex.add(new Vertex(event.getX(), event.getY(), false, MotionEvent.ACTION_DOWN, penSize, penColor));
 				return true;
 			}
 			if (event.getAction() == MotionEvent.ACTION_MOVE) {
-				arVertex.add(new Vertex(event.getX(), event.getY(), true));
+				arVertex.add(new Vertex(event.getX(), event.getY(), true, MotionEvent.ACTION_MOVE, penSize, penColor));
 				invalidate();
 				return true;
 			}
