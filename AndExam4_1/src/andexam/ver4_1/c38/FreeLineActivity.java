@@ -1,5 +1,9 @@
 package andexam.ver4_1.c38;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.*;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
@@ -8,6 +12,7 @@ import andexam.ver4_1.R;
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
+import android.net.Uri;
 import android.os.*;
 import android.view.*;
 import android.view.View.OnClickListener;
@@ -16,6 +21,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+import android.widget.ShareActionProvider;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
@@ -28,6 +34,8 @@ public class FreeLineActivity extends Activity {
 	
 	private int penSize = 5;
 	private int penColor = Color.BLACK;
+	
+	private Bitmap mBitmap;
 	
 	public class Vertex {
 		float x;
@@ -87,6 +95,59 @@ public class FreeLineActivity extends Activity {
 		arVertex = new ArrayList<Vertex>();
 	}
 	
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.shareactionmenu, menu);
+		
+
+
+		Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("image/*");
+		//Uri uri = Uri.parse("file:///storage/emulated/legacy/document/temp/printimg_0001.jpg");
+		//Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getAbsolutePath() + "/capture.jpg");
+		//intent.putExtra(Intent.EXTRA_STREAM, uri);  
+		intent.putExtra(Intent.EXTRA_STREAM, mBitmap);
+
+		MenuItem share = menu.findItem(R.id.share);
+		ShareActionProvider provider = (ShareActionProvider) share.getActionProvider();
+		provider.setShareHistoryFileName(ShareActionProvider.
+				DEFAULT_SHARE_HISTORY_FILE_NAME);
+		provider.setShareIntent(intent);
+
+		MenuItem sharemenu = menu.findItem(R.id.sharemenu);
+		ShareActionProvider providermenu = (ShareActionProvider) share.getActionProvider();
+		providermenu.setShareHistoryFileName(ShareActionProvider.
+				DEFAULT_SHARE_HISTORY_FILE_NAME);
+		providermenu.setShareIntent(intent);
+
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		//그림을 비트맵으로 저장하기
+		vw.buildDrawingCache();
+		mBitmap = vw.getDrawingCache();
+		FileOutputStream fo = null;
+		try {
+			fo = new FileOutputStream(new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/capture.jpg"));
+			mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fo);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			if(fo != null) {
+				try {
+					fo.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		return super.onOptionsItemSelected(item);
+	}
+
 	private void selectPenSize() {
 		LinearLayout linear = (LinearLayout) View.inflate(this, R.layout.penselect, null);
 		SeekBar seekbarPenSize = (SeekBar) linear.findViewById(R.id.seekbarPenSize);
