@@ -57,10 +57,25 @@ public class SDCard extends Activity {
 		case R.id.load:
 			try {
 				FileInputStream fis = new FileInputStream(mSdPath + "/dir/file.txt");
-				byte[] data = new byte[fis.available()];
-				while (fis.read(data) != -1) {;}
-				fis.close();
-				mEdit.setText(new String(data));
+//				byte[] data = new byte[fis.available()];
+//				while (fis.read(data) != -1) {;}
+//				fis.close();
+//				
+//				mEdit.setText(new String(data));
+				
+				
+				
+	            BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+	                 
+                String txt = "";
+     
+                while((txt = reader.readLine()) != null) 
+                {
+                    mEdit.setText(txt);
+                }
+     
+                reader.close();
+
 			} catch (FileNotFoundException e) {
 				mEdit.setText("File Not Found");
 			}

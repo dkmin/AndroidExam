@@ -1,34 +1,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	>
-<Button
-	android:id="@+id/web"
-	android:layout_width="match_parent" 
-	android:layout_height="wrap_content" 
-	android:onClick="mOnClick"
-	android:text="web"
-/>
-<Button
-	android:id="@+id/dial"
-	android:layout_width="match_parent" 
-	android:layout_height="wrap_content" 
-	android:onClick="mOnClick"
-	android:text="dial"
-/>
-<Button
-	android:id="@+id/picture"
-	android:layout_width="match_parent" 
-	android:layout_height="wrap_content" 
-	android:onClick="mOnClick"
-	android:text="picture"
-/>
-<Button
-	android:id="@+id/other"
-	android:layout_width="match_parent" 
-	android:layout_height="wrap_content" 
-	android:onClick="mOnClick"
-	android:text="other"
-/>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick"
+        android:text="web" />
+
+    <Button
+        android:id="@+id/dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick"
+        android:text="dial" />
+
+    <Button
+        android:id="@+id/picture"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="mOnClick"
+        android:text="picture" />
+
+    <Button
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick"
+        android:text="other" />
+    
+    <Button
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick"
+        android:text="map" />
+    
+        <Button
+        android:id="@+id/mapSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick"
+        android:text="map search" />
+
 </LinearLayout>
