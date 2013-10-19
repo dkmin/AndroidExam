@@ -79,6 +79,10 @@ public class MapV2Activity extends Activity {
                         }
                     })
                     .show();
+<<<<<<< HEAD
+=======
+                
+>>>>>>> branch 'master' of https://github.com/eastflag/AndroidExam.git
             }
         });
 	}
