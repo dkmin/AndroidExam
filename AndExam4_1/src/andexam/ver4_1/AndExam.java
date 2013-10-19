@@ -38,6 +38,7 @@ import andexam.ver4_1.c36_tel.*;
 import andexam.ver4_1.c37_appwidget.*;
 import andexam.ver4_1.c38.CountDownActivity;
 import andexam.ver4_1.c38.FreeLineActivity;
+import andexam.ver4_1.c38.MapSearchActivity;
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
@@ -538,6 +539,7 @@ public class AndExam extends Activity {
 			arExample.add(new Example(OverlayView.class, "오버레이 뷰"));
 			arExample.add(new Example(OverlayMulti.class, "오버레이 항목"));
 			arExample.add(new Example(OverlayLocation.class, "현재 위치 및 나침반"));
+			arExample.add(new Example(MapV2Activity.class, "Map v2"));
 			break;
 		case 33: // 멀티미디어
 			arExample.add(new Example(MPTest.class, "MediaPlayer의 간단한 사용법 연구"));
@@ -595,7 +597,8 @@ public class AndExam extends Activity {
 			break;
 		case 38: // 추가
 			arExample.add(new Example(CountDownActivity.class, "카운트다운 게임"));
-			arExample.add(new Example(FreeLineActivity.class, "카운트다운 게임"));
+			arExample.add(new Example(FreeLineActivity.class, "자유곡선 앱"));
+			arExample.add(new Example(MapSearchActivity.class, "위치기반 검색 앱"));
 			break;
 		}
 	}
