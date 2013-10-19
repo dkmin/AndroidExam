@@ -23,7 +23,7 @@ public class ShareAction extends Activity {
 
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("text/plain");
-		intent.putExtra(Intent.EXTRA_STREAM, "sharing text");
+		intent.putExtra(Intent.EXTRA_TEXT, "sharing text");
 //		intent.setType("image/*");
 //		//Uri uri = Uri.parse("file:///storage/emulated/legacy/document/temp/printimg_0001.jpg");
 //		Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getAbsolutePath() + "/document/temp/printimg_0001.jpg");
