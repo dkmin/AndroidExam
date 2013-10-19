@@ -5,11 +5,17 @@ import java.util.*;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.*;
 import android.content.*;
+import android.content.DialogInterface.OnClickListener;
 import android.location.*;
 import android.os.*;
 import android.widget.*;
@@ -49,6 +55,32 @@ public class MapV2Activity extends Activity {
 		mGoogleMap = mMapFragment.getMap();
 		
 		mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.481828, 126.880001), 15));
+		
+		//4. 마커 표시하기
+		mGoogleMap.addMarker(new MarkerOptions()
+		            .position(new LatLng(37.481828, 126.880001))
+		            .icon(BitmapDescriptorFactory.fromResource(R.drawable.pointer))
+		            .title("지명")
+		            .snippet("구로디지탈 단지역"));
+		
+		//5. 마커를 누를때 나오는 박스를 누를때 띄우는 infoWindow
+		mGoogleMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
+            
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MapV2Activity.this);
+                builder.setTitle("마커 정보")
+                    .setMessage("해당 마커의 상세 정보 :" + marker.getSnippet())
+                    .setPositiveButton("OK", new OnClickListener() {
+                        
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            
+                        }
+                    })
+                    .show();
+            }
+        });
 	}
 	
 	
