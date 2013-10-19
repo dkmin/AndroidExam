@@ -2,8 +2,9 @@
 
     <item
         android:id="@+id/searchmap"
-        android:orderInCategory="100"
-        android:showAsAction="always"
+		android:icon="@android:drawable/ic_menu_search" 
+		android:showAsAction="always|collapseActionView"
+		android:actionViewClass="android.widget.SearchView"
         android:title="map search"/>
 
 </menu>

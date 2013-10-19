@@ -26,5 +26,6 @@
     <string name="title_activity_count_down">CountDownActivity</string>
     <string name="title_activity_map_v2">MapV2Activity</string>
     <string name="title_activity_map_search">MapSearchActivity</string>
+    <string name="title_activity_search_aquery">SearchAqueryActivity</string>
 
 </resources>

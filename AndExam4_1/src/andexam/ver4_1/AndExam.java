@@ -498,7 +498,8 @@ public class AndExam extends Activity {
 			arExample.add(new Example(SaxParser.class, "SAX 파서로 XML 문서 읽기"));
 			arExample.add(new Example(PullParser.class, "PULL 파서로 XML 문서 읽기"));
 			arExample.add(new Example(JSONArrayTest.class, "JSON 정수 배열 읽어서 합산"));
-			arExample.add(new Example(JSONObjectTest.class, "JSON 객체 읽어서 출력"));			
+			arExample.add(new Example(JSONObjectTest.class, "JSON 객체 읽어서 출력"));	
+			arExample.add(new Example(SearchAqueryActivity.class, "네이버 검색 API AQuery예제"));  
 			break;
 		case 29: // BR
 			arExample.add(new Example(NapAlarm.class, "낮잠 시간을 알려 주는 알람 시계"));
