@@ -119,6 +119,8 @@ public class MapSearchActivity extends Activity {
             public void callback(String url, XmlDom xml, AjaxStatus status) {
             	Log.d("ldk", "callback: " + status.getCode());
             	Log.d("ldk", "xml: " + xml.toString());
+            	
+            	mPlaceList.clear();
                 
                 List<XmlDom> results = xml.tags("result");
                 for(XmlDom result : results) {
@@ -126,8 +128,12 @@ public class MapSearchActivity extends Activity {
                     place.name = result.text("name");
                     place.vicinity = result.text("vicinity");
                     place.type = result.text("type");
-                    place.lat = Double.parseDouble(result.text("lat"));
-                    place.lng = Double.parseDouble(result.text("lng"));
+                    try {
+	                    place.lat = Double.parseDouble(result.text("lat"));
+	                    place.lng = Double.parseDouble(result.text("lng"));
+                    } catch(NumberFormatException e) { 
+                    } catch(NullPointerException e) {
+                    } catch(Exception e) { }
                     mPlaceList.add(place);
                 }
                 
@@ -138,7 +144,7 @@ public class MapSearchActivity extends Activity {
     }
     
     private void displayMap() {
-    	
+    	Log.d("ldk", "size(): " + mPlaceList.size());
     }
 
 }

@@ -1715,7 +1715,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCQWLNGSC2Zpcdc0gry0qqSyrtjDMcjdb4" />
+            android:value="AIzaSyB_1gvhlMJSPLqzfVb77yEwdtVBtieZZjY" />
 
         <activity
             android:name="andexam.ver4_1.c28_network.SearchAqueryActivity"
