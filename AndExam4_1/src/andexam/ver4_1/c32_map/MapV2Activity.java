@@ -63,7 +63,7 @@ public class MapV2Activity extends Activity {
 		            .title("지명")
 		            .snippet("구로디지탈 단지역"));
 		
-		//5. 마커를 누를때 나오는 박스를 누를때 띄우는 infoWindow
+		//5. 마커를 누를때 나오는 infowindow 박스를 누를때 띄우는 alertDialog
 		mGoogleMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
             
             @Override

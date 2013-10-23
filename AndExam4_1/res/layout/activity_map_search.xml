@@ -1,19 +1,41 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MapSearchActivity" >
-    
-	<ListView 
-	    android:id="@+id/searchlist"
-	    android:layout_width="match_parent"
-		android:layout_height="match_parent">
-	</ListView>  
-        
+    <!-- 
     <fragment
 		android:id="@+id/searchfragment"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		class="com.google.android.gms.maps.MapFragment" />
+		class="com.google.android.gms.maps.MapFragment" /> -->
+    
+	<SlidingDrawer	 
+		android:id="@+id/drawer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:topOffset="20dip"
+		android:handle="@+id/handle"
+		android:content="@+id/content">
+		<ImageView
+			 android:id="@id/handle"
+			 android:src="@drawable/drawer_icon"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content" 
+			 />	 
+		<LinearLayout		 
+			android:id="@id/content"
+			android:orientation="vertical"
+			android:layout_width="match_parent"		 
+			android:layout_height="match_parent" 
+			android:background="#808080"> 
+			<ListView 
+			    android:id="@+id/searchlist"
+			    android:layout_width="match_parent"
+				android:layout_height="match_parent">
+			</ListView>  
+		</LinearLayout>	
+	</SlidingDrawer>
 
-</FrameLayout>
+</LinearLayout>
