@@ -58,17 +58,17 @@ public class MapSearchActivity extends Activity {
         mAq = new AQuery(this);
         AQUtility.setDebug(true);
         
-        LocationManager mLocMan = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-		
-		String mProvider = mLocMan.getBestProvider(new Criteria(), true);
-		mLocation = mLocMan.getLastKnownLocation(mProvider);
-        
-		FragmentManager fm = getFragmentManager();
-		MapFragment mMapFragment = (MapFragment)fm.findFragmentById(R.id.searchfragment);
-		mGoogleMap = mMapFragment.getMap();
-		
-		LatLng mLatLng = new LatLng(mLocation.getLatitude(), mLocation.getLongitude());
-		mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mLatLng, 14));
+//        LocationManager mLocMan = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+//		
+//		String mProvider = mLocMan.getBestProvider(new Criteria(), true);
+//		mLocation = mLocMan.getLastKnownLocation(mProvider);
+//        
+//		FragmentManager fm = getFragmentManager();
+//		MapFragment mMapFragment = (MapFragment)fm.findFragmentById(R.id.searchfragment);
+//		mGoogleMap = mMapFragment.getMap();
+//		
+//		LatLng mLatLng = new LatLng(mLocation.getLatitude(), mLocation.getLongitude());
+//		mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mLatLng, 14));
     }
 
     @Override
