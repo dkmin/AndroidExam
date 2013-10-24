@@ -26,12 +26,12 @@
         android:name="andexam.ver4_1.c18_process.AndExam_Application"
         android:debuggable="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/andexam"
-        android:label="안드로이드 프로그래밍 정복"
+        android:icon="@drawable/ic_launcher"
+        android:label="안드로이드"
         android:theme="@style/android:Theme.Holo" >
         <activity
             android:name="andexam.ver4_1.AndExam"
-            android:label="AndExam" >
+            android:label="안드로이드" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -1710,12 +1710,13 @@
         </activity>
         <activity
             android:name="andexam.ver4_1.c38.MapSearchActivity"
-            android:label="@string/title_activity_map_search" >
+            android:label="맵검색"
+            android:logo="@drawable/map_icon" >
         </activity>
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBr2P2dRjVf9JmuXE2axUWSzbm24klQcLI" />
+            android:value="AIzaSyDa_94dlsjN-7K6ayxEhpC425xUIcvnCbw" />
 
         <activity
             android:name="andexam.ver4_1.c28_network.SearchAqueryActivity"

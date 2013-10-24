@@ -38,9 +38,15 @@ public class ImageViewer extends Activity {
 		startManagingCursor(mCursor);
 		
 		
-/*		//file path 에서 content uri 로 변경하기
+		//file path 에서 content uri 로 변경하기
 		File f = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/DCIM/100LGDSC/CAM00001.jpg");
-		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/DCIM/100LGDSC/CAM00001.jpg";
+        if (f.exists()) {
+            Uri uri = Uri.fromFile(f);
+            String mimeType = getContentResolver().getType(uri);
+            Log.d("ldk", "mimeType:" + mimeType);
+        }
+		
+/*		String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/DCIM/100LGDSC/CAM00001.jpg";
 	    Cursor cursor = getContentResolver().query(
 	            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
 	            new String[] { MediaStore.Images.Media._ID },
@@ -62,20 +68,20 @@ public class ImageViewer extends Activity {
 	    }*/
 		
 		//file path를 content uri로 변환
-		String fileStr = Environment.getExternalStorageDirectory().getAbsolutePath() + "/DCIM/100LGDSC/CAM00001.jpg";
-
-		String filePath = fileStr;
-
-		Cursor c = getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null, "_data ='" + filePath + "'",null,null);
-		//Cursor c = getContentResolver().query(MediaStore.Files.getContentUri("external"), null, "_data ='" + filePath + "'",null,null);
-
-		c.moveToNext();
-
-		int id = c.getInt(0);
-
-		Uri uri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,id);
-
-		Log.e("URI",uri.toString());
+//		String fileStr = Environment.getExternalStorageDirectory().getAbsolutePath() + "/DCIM/100LGDSC/CAM00001.jpg";
+//
+//		String filePath = fileStr;
+//
+//		Cursor c = getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null, "_data ='" + filePath + "'",null,null);
+//		//Cursor c = getContentResolver().query(MediaStore.Files.getContentUri("external"), null, "_data ='" + filePath + "'",null,null);
+//
+//		c.moveToNext();
+//
+//		int id = c.getInt(0);
+//
+//		Uri uri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,id);
+//
+//		Log.e("URI",uri.toString());
 		//10-23 19:52:23.359: E/URI(6849): content://media/external/images/media/91 결과는 동일
 
 

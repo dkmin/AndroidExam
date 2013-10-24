@@ -1,15 +1,15 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MapSearchActivity" >
-    <!-- 
+
     <fragment
 		android:id="@+id/searchfragment"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		class="com.google.android.gms.maps.MapFragment" /> -->
+		class="com.google.android.gms.maps.MapFragment" />
     
 	<SlidingDrawer	 
 		android:id="@+id/drawer"
@@ -38,4 +38,4 @@
 		</LinearLayout>	
 	</SlidingDrawer>
 
-</LinearLayout>
+</RelativeLayout>

@@ -25,7 +25,7 @@ public class Ball {
 		bgPaint = new Paint();
 		Random rand = new Random();
 		bgPaint.setAntiAlias(true);
-		bgPaint.setARGB(255, rand.nextInt(255), rand.nextInt(255), rand.nextInt(255));
+		bgPaint.setARGB(255, rand.nextInt(200), rand.nextInt(200), rand.nextInt(200));
 		
         fontPaint = new Paint();
         fontPaint.setColor(Color.WHITE);

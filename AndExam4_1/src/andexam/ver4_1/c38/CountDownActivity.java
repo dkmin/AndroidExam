@@ -56,6 +56,17 @@ public class CountDownActivity extends Activity {
                     mv.invalidate();
                 }
                 break;
+            case 10:
+                mv.mIsGameOver = true;
+                mHandler.sendEmptyMessage(100);
+                break;
+            case 100:
+                if(!mv.mIsGameOver) {
+                    mv.mTime++;
+                    mHandler.sendEmptyMessageDelayed(100, 1000);
+                }
+                mv.invalidate();
+                break;
             }
         }
 	};
