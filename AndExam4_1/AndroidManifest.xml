@@ -29,6 +29,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="안드로이드"
         android:theme="@style/android:Theme.Holo" >
+        
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+         
         <activity
             android:name="andexam.ver4_1.AndExam"
             android:label="안드로이드" >
