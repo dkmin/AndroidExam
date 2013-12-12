@@ -27,5 +27,7 @@
     <string name="title_activity_map_v2">MapV2Activity</string>
     <string name="title_activity_map_search">MapSearchActivity</string>
     <string name="title_activity_search_aquery">SearchAqueryActivity</string>
+    <string name="title_activity_smstts">SMSTTSActivity</string>
+    <string name="title_activity_smsun_lock">SMSUnLockActivity</string>
 
 </resources>

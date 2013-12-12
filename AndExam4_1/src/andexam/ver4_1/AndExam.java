@@ -39,6 +39,7 @@ import andexam.ver4_1.c37_appwidget.*;
 import andexam.ver4_1.c38.CountDownActivity;
 import andexam.ver4_1.c38.FreeLineActivity;
 import andexam.ver4_1.c38.MapSearchActivity;
+import andexam.ver4_1.c38.SMSTTSActivity;
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
@@ -600,6 +601,7 @@ public class AndExam extends Activity {
 			arExample.add(new Example(CountDownActivity.class, "카운트다운 게임"));
 			arExample.add(new Example(FreeLineActivity.class, "자유곡선 앱"));
 			arExample.add(new Example(MapSearchActivity.class, "위치기반 검색 앱"));
+			arExample.add(new Example(SMSTTSActivity.class, "SMS와 TTS"));
 			break;
 		}
 	}

@@ -7,6 +7,8 @@ import android.widget.*;
 import andexam.ver4_1.*;
 import andexam.ver4_1.c20_fragment.SaveFragmentState.CounterFragment;
 
+//프래그먼트를 동적으로 생성, 삭제, 교체
+//process : 프래그먼트매니저 생성 -> 트랜잭션시작 ->do work : 컨테이너에 프래그먼트 inflate하기 -> 트랜잭션 종료(commit)
 public class FragmentManagerTest extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
