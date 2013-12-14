@@ -40,5 +40,4 @@ public class CounterFragment extends Fragment {
         return root;
     }
 
-
 }
