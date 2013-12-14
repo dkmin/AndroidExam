@@ -1731,7 +1731,7 @@
             android:label="@string/title_activity_smstts" >
         </activity>
 
-        <receiver
+        <!--  <receiver
             android:name="andexam.ver4_1.c38.SMSTTSReceiver"
             android:enabled="true"
             android:exported="true" >
@@ -1739,7 +1739,7 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" >
                 </action>
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
         <activity
             android:name="andexam.ver4_1.c38.SMSUnLockActivity"
