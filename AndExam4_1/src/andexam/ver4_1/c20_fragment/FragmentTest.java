@@ -14,7 +14,7 @@ public class FragmentTest extends Activity {
 		setContentView(R.layout.fragmenttest);
 	}
 
-	public static class CounterFragment extends Fragment {
+/*	public static class CounterFragment extends Fragment {
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 				Bundle savedInstanceState) {
 			View root = inflater.inflate(R.layout.counterfragment, container, false);
@@ -30,7 +30,7 @@ public class FragmentTest extends Activity {
 
 			return root;
 		}
-	}
+	}*/
 }
 //*/
   
