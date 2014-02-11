@@ -50,6 +50,7 @@ public class AnimatorSetTest extends Activity {
 			mEnLarge.addUpdateListener(mInvalator);
 		}
 		
+		//같이 적용은 with, 먼저 적용은 after, 나중에 적용은 before
 		public void startAnim(int id) {
 			mBall.setX(100);
 			mBall.setY(50);

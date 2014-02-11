@@ -474,7 +474,8 @@ public class AndExam extends Activity {
 		case 26: // CP
 			arExample.add(new Example(EnglishWord.class, "DB를 이용한 영어 단어장"));
 			arExample.add(new Example(ProductList.class, "커서와 연결된 리스트 뷰"));
-			arExample.add(new Example(CallWordCP.class, "영어 단어장 CP 호출"));			
+			arExample.add(new Example(CallWordCP.class, "영어 단어장 CP 호출"));	
+			arExample.add(new Example(ContactActivity.class, "주소록 Loader 예제"));
 			break;
 		case 27: // 클립보드 
 			arExample.add(new Example(CopyText.class, "텍스트 복사"));

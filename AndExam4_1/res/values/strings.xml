@@ -30,5 +30,6 @@
     <string name="title_activity_smstts">SMSTTSActivity</string>
     <string name="title_activity_smsun_lock">SMSUnLockActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_contact">ContactActivity</string>
 
 </resources>
