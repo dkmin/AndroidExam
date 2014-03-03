@@ -1,24 +1,26 @@
 package andexam.ver4_1.c32_map;
 
-import andexam.ver4_1.*;
-import java.util.*;
+import andexam.ver4_1.R;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.FragmentManager;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import android.app.*;
-import android.content.*;
-import android.content.DialogInterface.OnClickListener;
-import android.location.*;
-import android.os.*;
-import android.widget.*;
 
 /**
  * 1. 환경 설정
@@ -57,9 +59,12 @@ public class MapV2Activity extends Activity {
 		mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.481828, 126.880001), 15));
 		
 		//4. 마커 표시하기
+		Bitmap mBitmap = overlay(BitmapFactory.decodeResource(getResources(), R.drawable.pin),
+		        BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
 		mGoogleMap.addMarker(new MarkerOptions()
 		            .position(new LatLng(37.481828, 126.880001))
-		            .icon(BitmapDescriptorFactory.fromResource(R.drawable.pointer))
+		            //.icon(BitmapDescriptorFactory.fromResource(R.drawable.pointer))
+		            .icon(BitmapDescriptorFactory.fromBitmap(mBitmap))
 		            .title("지명")
 		            .snippet("구로디지탈 단지역"));
 		
@@ -81,7 +86,18 @@ public class MapV2Activity extends Activity {
                     .show();
             }
         });
-	}
+    }
 	
-	
+    private Bitmap overlay(Bitmap out, Bitmap in) {
+        Bitmap bmOverlay = Bitmap.createBitmap(out.getWidth(), out.getHeight(), out.getConfig());
+        Canvas canvas = new Canvas(bmOverlay);
+        canvas.drawBitmap(out, new Matrix(), null);
+        
+        Matrix matrix = new Matrix();
+        matrix.postScale(0.7f, 0.7f, in.getWidth()/2, in.getHeight()/2);
+        matrix.postTranslate((out.getWidth()-in.getWidth())/2, (out.getHeight()-in.getHeight())/2);
+        
+        canvas.drawBitmap(in, matrix, null);
+        return bmOverlay;
+    }
 }
