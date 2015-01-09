@@ -20,6 +20,7 @@ public class DialogFragmentTest extends Activity {
 		}
 		NameGenderFragment dialog = new NameGenderFragment();
 		dialog.show(tr, "dialog");
+		
 		//dialog.show(fm, "dialog");
 	}
 
@@ -28,17 +29,20 @@ public class DialogFragmentTest extends Activity {
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
 			View root = inflater.inflate(R.layout.namegenderfragment, container, false);
+			
+			getDialog().setTitle("select"); //제목 세팅
+			
 			return root;
 		}
 		//*/
 
-		/* Dialog 객체 생성해서 리턴
-		public Dialog onCreateDialog(Bundle savedInstanceState) {
+		//Dialog 객체 생성해서 리턴
+		/*public Dialog onCreateDialog(Bundle savedInstanceState) {
 			Dialog dialog = new Dialog(getActivity());
 			dialog.setContentView(R.layout.namegenderfragment);
 
 			return dialog;
-		}
-		//*/
+		}*/
+		//
 	}
 }
