@@ -3,6 +3,7 @@ package andexam.ver4_1.c33_multimedia;
 import andexam.ver4_1.*;
 import android.app.*;
 import android.media.*;
+import android.net.Uri;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
@@ -58,7 +59,8 @@ public class PlayVideo extends Activity implements SurfaceHolder.Callback {
 		}
 		try {
 			String sd = Environment.getExternalStorageDirectory().getAbsolutePath();
-			mPlayer.setDataSource(sd + "/testvideo.mp4");
+			//mPlayer.setDataSource(sd + "/testvideo.mp4");
+			mPlayer.setDataSource(this, Uri.parse("rtsp://admin:admin@192.168.0.103/Master-0"));
 			mPlayer.setDisplay(holder);
 			mPlayer.prepare();
 			mPlayer.setOnCompletionListener(mComplete);

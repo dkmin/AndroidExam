@@ -536,12 +536,12 @@ public class AndExam extends Activity {
 			arExample.add(new Example(LocationConvert.class, "포맷 변환"));
 			arExample.add(new Example(LocationAlert.class, "도착 알림"));
 			arExample.add(new Example(ViewLocation.class, "63빌딩 위치 보기"));
-			arExample.add(new Example(MapViewTest.class, "맵뷰 테스트"));
-			arExample.add(new Example(GeoCoding.class, "지오 코딩"));
-			arExample.add(new Example(OverlayWidget.class, "오버레이 위젯"));
-			arExample.add(new Example(OverlayView.class, "오버레이 뷰"));
-			arExample.add(new Example(OverlayMulti.class, "오버레이 항목"));
-			arExample.add(new Example(OverlayLocation.class, "현재 위치 및 나침반"));
+//			arExample.add(new Example(MapViewTest.class, "맵뷰 테스트"));
+//			arExample.add(new Example(GeoCoding.class, "지오 코딩"));
+//			arExample.add(new Example(OverlayWidget.class, "오버레이 위젯"));
+//			arExample.add(new Example(OverlayView.class, "오버레이 뷰"));
+//			arExample.add(new Example(OverlayMulti.class, "오버레이 항목"));
+//			arExample.add(new Example(OverlayLocation.class, "현재 위치 및 나침반"));
 			arExample.add(new Example(MapV2Activity.class, "Map v2"));
 			break;
 		case 33: // 멀티미디어

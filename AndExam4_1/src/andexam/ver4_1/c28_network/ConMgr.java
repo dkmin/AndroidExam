@@ -1,10 +1,12 @@
 package andexam.ver4_1.c28_network;
 
-import andexam.ver4_1.*;
-import android.app.*;
-import android.net.*;
-import android.os.*;
-import android.widget.*;
+import andexam.ver4_1.R;
+import android.app.Activity;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
 
 public class ConMgr extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,14 @@ public class ConMgr extends Activity {
 			sResult += ("Active : \n" + ni.toString() + "\n");
 			result.setText(sResult);
 		}
+		
+		if(mgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnected()) {
+			Log.d("LDK", "wifi is available");
+		}
+		
+/*		if(mgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnected()) {
+			Log.d("LDK", "mobile is available");
+		}*/
 	}
 }
 
