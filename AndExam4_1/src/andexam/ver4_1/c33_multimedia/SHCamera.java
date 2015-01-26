@@ -139,10 +139,11 @@ public class SHCamera extends Activity {
 		}
 	};
 	
+	//5.0.1 변경사항
 	// 크기 변경
 	Button.OnClickListener mSizeClick = new Button.OnClickListener() {
 		public void onClick(View v) {
-			Parameters params = mSurface.mCamera.getParameters();
+/*			Parameters params = mSurface.mCamera.getParameters();
 			final List<Size> arSize = params.getSupportedPictureSizes();
 			String[] arName = new String[arSize.size()];
 			for (int i = 0; i < arSize.size(); i++) {
@@ -176,7 +177,7 @@ public class SHCamera extends Activity {
 				}
 			})
 			.setNegativeButton("취소", null)
-			.show();
+			.show();*/
 		}
 	};
 	
@@ -303,9 +304,10 @@ class SHCameraSurface extends SurfaceView implements SurfaceHolder.Callback {
 		}
 	}
 
+	//5.0.1 변경사항
 	// 표면의 크기가 결정될 때 최적의 미리보기 크기를 구해 설정한다.
 	public void surfaceChanged(SurfaceHolder holder, int format, int width,	int height) {
-		Camera.Parameters params = mCamera.getParameters();
+		/*Camera.Parameters params = mCamera.getParameters();
 		List<Size> arSize = params.getSupportedPreviewSizes();
 		if (arSize == null) {
 			params.setPreviewSize(width, height);
@@ -327,6 +329,6 @@ class SHCameraSurface extends SurfaceView implements SurfaceHolder.Callback {
 			params.setPictureSize(SHCamera.mPicWidth, SHCamera.mPicHeight);
 		}
 		mCamera.setParameters(params);
-		mCamera.startPreview();
+		mCamera.startPreview();*/
 	}
 }

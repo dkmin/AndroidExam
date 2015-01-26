@@ -108,9 +108,10 @@ class MyCameraSurface extends SurfaceView implements SurfaceHolder.Callback {
 		}
 	}
 
+	//5.0.1에서 오류 발생
 	// 표면의 크기가 결정될 때 최적의 미리보기 크기를 구해 설정한다.
 	public void surfaceChanged(SurfaceHolder holder, int format, int width,	int height) {
-		Camera.Parameters params = mCamera.getParameters();
+		/*Camera.Parameters params = mCamera.getParameters();
 		List<Size> arSize = params.getSupportedPreviewSizes();
 		if (arSize == null) {
 			params.setPreviewSize(width, height);
@@ -127,6 +128,6 @@ class MyCameraSurface extends SurfaceView implements SurfaceHolder.Callback {
 			params.setPreviewSize(opti.width, opti.height);
 		}
 		mCamera.setParameters(params);
-		mCamera.startPreview();
+		mCamera.startPreview();*/
 	}
 }
