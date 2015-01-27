@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@drawable/coding_101_background" >
+    
+	<RelativeLayout 
+		android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+		android:background="#ffffff"
+		android:padding="5dip">
+		<ImageView  
+			android:id="@+id/picture"  
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:layout_centerVertical="true"
+			android:src="@drawable/coffee1" />
+
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true"
+		    android:text="홍길동" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" />
+
+	</RelativeLayout>
+	
+	<LinearLayout 
+	    android:layout_width="0dp" android:layout_weight="4" android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:padding="5dp" >
+		<LinearLayout 
+		    android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.5" 
+		    android:orientation="horizontal" 
+		    android:gravity="center_vertical">
+
+			<TextView
+			    android:id="@+id/name"
+			    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+			    android:text="자바의 정석"
+			    android:textColor="#000000"
+			    android:textSize="20sp" />
+
+			<TextView
+				android:id="@+id/call"  
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:text="30,000W"
+				android:textColor="#0000ff"
+				android:textSize="14sp"/>
+		</LinearLayout>
+		<TextView  
+			android:id="@+id/description"  
+			android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" 
+			android:text="객체지향개념을 완전히 이해할 수 있도록 원리중심으로 설명하고 있으며, 부록으로 별책 강의발표자료(p.238)를 제공해서 학습한 내용을 요약 및 복습할 수 있다. 1판에는 없었던 각 장의 연습문제를 추가하였고, 제네릭스(generic)에 대한 설명을 보충하였다. 그리고 동영상 강의를 통해 독자들이 혼자서도 충분히 학습할 수 있도록 하였다."
+			android:textColor="#000000"
+			android:textSize="12sp" android:gravity="left|center_vertical"
+			android:singleLine="true"
+			android:ellipsize="end"/>
+	</LinearLayout>
+
+</LinearLayout>

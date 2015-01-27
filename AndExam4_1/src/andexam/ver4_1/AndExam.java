@@ -36,6 +36,10 @@ import andexam.ver4_1.c34_sensor.*;
 import andexam.ver4_1.c35_setting.*;
 import andexam.ver4_1.c36_tel.*;
 import andexam.ver4_1.c37_appwidget.*;
+import andexam.ver4_1.c38.Coding101_1Activity;
+import andexam.ver4_1.c38.Coding101_2Activity;
+import andexam.ver4_1.c38.Coding102_1Activity;
+import andexam.ver4_1.c38.Coding103_1Activity;
 import andexam.ver4_1.c38.CountDownActivity;
 import andexam.ver4_1.c38.FreeLineActivity;
 import andexam.ver4_1.c38.MapSearchActivity;
@@ -603,6 +607,10 @@ public class AndExam extends Activity {
 			arExample.add(new Example(FreeLineActivity.class, "자유곡선 앱"));
 			arExample.add(new Example(MapSearchActivity.class, "위치기반 검색 앱"));
 			arExample.add(new Example(SMSTTSActivity.class, "SMS와 TTS"));
+			arExample.add(new Example(Coding101_1Activity.class, "Coding101_1 레이아웃"));
+			arExample.add(new Example(Coding101_2Activity.class, "Coding101_2 레이아웃"));
+			arExample.add(new Example(Coding102_1Activity.class, "Coding102_1 이벤트처리 기본"));
+			arExample.add(new Example(Coding103_1Activity.class, "Coding103_1 뷰 동적생성 및 제어"));
 			break;
 		}
 	}
