@@ -40,6 +40,7 @@ import andexam.ver4_1.c38.Coding101_1Activity;
 import andexam.ver4_1.c38.Coding101_2Activity;
 import andexam.ver4_1.c38.Coding102_1Activity;
 import andexam.ver4_1.c38.Coding103_1Activity;
+import andexam.ver4_1.c38.Coding104_1Activity;
 import andexam.ver4_1.c38.CountDownActivity;
 import andexam.ver4_1.c38.FreeLineActivity;
 import andexam.ver4_1.c38.MapSearchActivity;
@@ -611,6 +612,7 @@ public class AndExam extends Activity {
 			arExample.add(new Example(Coding101_2Activity.class, "Coding101_2 레이아웃"));
 			arExample.add(new Example(Coding102_1Activity.class, "Coding102_1 이벤트처리 기본"));
 			arExample.add(new Example(Coding103_1Activity.class, "Coding103_1 뷰 동적생성 및 제어"));
+			arExample.add(new Example(Coding104_1Activity.class, "Coding104_1 뷰 동적생성2 - inflate"));
 			break;
 		}
 	}

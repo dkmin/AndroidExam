@@ -1,13 +1,20 @@
 package andexam.ver4_1.c38;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import andexam.ver4_1.R;
-import andexam.ver4_1.R.id;
-import andexam.ver4_1.R.layout;
-import andexam.ver4_1.R.menu;
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 public class Coding101_2Activity extends Activity {
 
@@ -15,24 +22,41 @@ public class Coding101_2Activity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_coding101_2);
+		
+		LinearLayout container = (LinearLayout) findViewById(R.id.container);
+		container.addView(new MyView(this));
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.coding101_2, menu);
-		return true;
-	}
+	class MyView extends View {
+		private Paint mPaint;
+		Bitmap mBitmap;
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		public MyView(Context context) {
+			super(context);
+			mPaint = new Paint();
+			mPaint.setColor(Color.BLUE);
+			
+			AssetManager assetManager = getAssets();
+		    InputStream is = null;
+		    try {
+		        is = assetManager.open("coffee1.png");
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		    }
+		    mBitmap = BitmapFactory.decodeStream(is);
 		}
-		return super.onOptionsItemSelected(item);
+
+		@Override
+		protected void onDraw(Canvas canvas) {
+			canvas.drawColor(Color.LTGRAY);
+			
+			canvas.drawCircle(490, 200, 100, mPaint);
+			
+			canvas.drawBitmap(mBitmap, 440, 400, null);
+			
+			super.onDraw(canvas);
+		}
+		
+		
 	}
 }
